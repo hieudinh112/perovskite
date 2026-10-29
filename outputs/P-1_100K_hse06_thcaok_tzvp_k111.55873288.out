@@ -1,0 +1,453 @@
+                  Welcome to Q-Chem
+           with Periodic Boundary Conditions
+     A Quantum Leap Into The Future Of Chemistry
+
+ A. Rettig, Xintian Feng, Meng-Fu Chen, Hieu Q. Dinh, N. M. Neal, A. Z. Ni,
+ S. Quiton, P. J. Robinson, Jinghong Zhang, Joonho Lee
+
+Contributors to earlier versions of Q-Chem not listed above:
+ Evgeny Epifanovsky, Leo Cunha, Jerome F. Gonthier, Kuan-Yu Liu
+ Input file: P-1_100K_hse06_thcaok_tzvp_k111.in
+ Scratch folder: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288
+ Auxillary files located at: /n/home02/hieudinh/qcpbc/qcaux
+ Q-Chem begins on Wed Oct 28 09:41:06 2026
+
+ -------------------------------------------------------------
+ User input:
+ -------------------------------------------------------------
+ $lattice
+ 3
+      7.775600000000000     0.000000000000000     0.000000000000000
+     -2.130161968204046    13.423534640295642     0.000000000000000
+     -0.206684211132880    -5.575524513048729    14.681809373550017
+ $end
+ 
+ $unitcell
+ RELATIVE
+ 0 1
+ Pb   0.500000000000000   0.500000000000000   0.000000000000000
+ Pb   0.969630000000000   0.484250000000000   0.745780000000000
+ Pb   0.030370000000000   0.515750000000000   0.254220000000000
+ Pb   0.500000000000000   0.500000000000000   0.500000000000000
+ Te   0.633690000000000   0.081380000000000   0.933210000000000
+ Te   0.366310000000000   0.918620000000000   0.066790000000000
+ Te   0.830350000000000   0.925850000000000   0.900940000000000
+ Te   0.169650000000000   0.074150000000000   0.099060000000000
+ Te   0.454900000000000   0.992490000000000   0.623610000000000
+ Te   0.545100000000000   0.007510000000000   0.376390000000000
+ Te   0.212600000000000   0.959840000000000   0.736280000000000
+ Te   0.787400000000000   0.040160000000000   0.263720000000000
+ Cl   0.606400000000000   0.722500000000000   0.039100000000000
+ Cl   0.393600000000000   0.277500000000000   0.960900000000000
+ Cl   0.057500000000000   0.705300000000000   0.833400000000000
+ Cl   0.942500000000000   0.294700000000000   0.166600000000000
+ Cl   0.928400000000000   0.246900000000000   0.648600000000000
+ Cl   0.071600000000000   0.753100000000000   0.351400000000000
+ Cl   0.178700000000000   0.498000000000000   0.591200000000000
+ Cl   0.821300000000000   0.502000000000000   0.408800000000000
+ Cl   0.274200000000000   0.477200000000000   0.846600000000000
+ Cl   0.725800000000000   0.522800000000000   0.153400000000000
+ Cl   0.653300000000000   0.520500000000000   0.674800000000000
+ Cl   0.346700000000000   0.479500000000000   0.325200000000000
+ Cl   0.795200000000000   0.459000000000000   0.894400000000000
+ Cl   0.204800000000000   0.541000000000000   0.105600000000000
+ Cl   0.472600000000000   0.274900000000000   0.454600000000000
+ Cl   0.527400000000000   0.725100000000000   0.545400000000000
+ N    0.987200000000000   0.298300000000000   0.962900000000000
+ N    0.012800000000000   0.701700000000000   0.037100000000000
+ N    0.482900000000000   0.699200000000000   0.835800000000000
+ N    0.517100000000000   0.300800000000000   0.164200000000000
+ N    0.353300000000000   0.309200000000000   0.658000000000000
+ N    0.646700000000000   0.690800000000000   0.342000000000000
+ N    0.111000000000000   0.711500000000000   0.539000000000000
+ N    0.889000000000000   0.288500000000000   0.461000000000000
+ C    0.765000000000000   0.162000000000000   0.848500000000000
+ C    0.235000000000000   0.838000000000000   0.151500000000000
+ C    0.957800000000000   0.206500000000000   0.875800000000000
+ C    0.042200000000000   0.793500000000000   0.124200000000000
+ C    0.680000000000000   0.818900000000000   0.777000000000000
+ C    0.320000000000000   0.181100000000000   0.223000000000000
+ C    0.493600000000000   0.777500000000000   0.790200000000000
+ C    0.506400000000000   0.222500000000000   0.209800000000000
+ C    0.430000000000000   0.230000000000000   0.683500000000000
+ C    0.570000000000000   0.770000000000000   0.316500000000000
+ C    0.366000000000000   0.125500000000000   0.603700000000000
+ C    0.634000000000000   0.874500000000000   0.396300000000000
+ C    0.003000000000000   0.872700000000000   0.632000000000000
+ C    0.997000000000000   0.127300000000000   0.368000000000000
+ C    0.981000000000000   0.752300000000000   0.602900000000000
+ C    0.019000000000000   0.247700000000000   0.397100000000000
+ H    0.937190000000000   0.352121000000000   0.957214000000000
+ H    0.062810000000000   0.647879000000000   0.042786000000000
+ H    0.103965000000000   0.321121000000000   0.977043000000000
+ H    0.896035000000000   0.678879000000000   0.022957000000000
+ H    0.938608000000000   0.278041000000000   0.007862000000000
+ H    0.061392000000000   0.721959000000000   0.992138000000000
+ H    0.753322000000000   0.111342000000000   0.784908000000000
+ H    0.246678000000000   0.888658000000000   0.215092000000000
+ H    0.704383000000000   0.221382000000000   0.849990000000000
+ H    0.295617000000000   0.778618000000000   0.150010000000000
+ H    0.017139000000000   0.149556000000000   0.881507000000000
+ H    0.982861000000000   0.850444000000000   0.118493000000000
+ H    0.010723000000000   0.229123000000000   0.827149000000000
+ H    0.989277000000000   0.770877000000000   0.172851000000000
+ H    0.678170000000000   0.856669000000000   0.733389000000000
+ H    0.321830000000000   0.143331000000000   0.266611000000000
+ H    0.740019000000000   0.757386000000000   0.749397000000000
+ H    0.259981000000000   0.242614000000000   0.250603000000000
+ H    0.438559000000000   0.838141000000000   0.826858000000000
+ H    0.561441000000000   0.161859000000000   0.173142000000000
+ H    0.427181000000000   0.744094000000000   0.730014000000000
+ H    0.572819000000000   0.255906000000000   0.269986000000000
+ H    0.535885000000000   0.644148000000000   0.803137000000000
+ H    0.464115000000000   0.355852000000000   0.196863000000000
+ H    0.368849000000000   0.674212000000000   0.839856000000000
+ H    0.631151000000000   0.325788000000000   0.160144000000000
+ H    0.537344000000000   0.730852000000000   0.892725000000000
+ H    0.462656000000000   0.269148000000000   0.107275000000000
+ H    0.384715000000000   0.374621000000000   0.702134000000000
+ H    0.615285000000000   0.625379000000000   0.297866000000000
+ H    0.392855000000000   0.311061000000000   0.604236000000000
+ H    0.607145000000000   0.688939000000000   0.395764000000000
+ H    0.234859000000000   0.290915000000000   0.651973000000000
+ H    0.765141000000000   0.709085000000000   0.348027000000000
+ H    0.387645000000000   0.225675000000000   0.741443000000000
+ H    0.612355000000000   0.774325000000000   0.258557000000000
+ H    0.559089000000000   0.247535000000000   0.689643000000000
+ H    0.440911000000000   0.752465000000000   0.310357000000000
+ H    0.409438000000000   0.132442000000000   0.546691000000000
+ H    0.590562000000000   0.867558000000000   0.453309000000000
+ H    0.237021000000000   0.112111000000000   0.597059000000000
+ H    0.762979000000000   0.887889000000000   0.402941000000000
+ H    0.892557000000000   0.895287000000000   0.654813000000000
+ H    0.107443000000000   0.104713000000000   0.345187000000000
+ H    0.025617000000000   0.892748000000000   0.577776000000000
+ H    0.974383000000000   0.107252000000000   0.422224000000000
+ H    0.993903000000000   0.732167000000000   0.657096000000000
+ H    0.006097000000000   0.267833000000000   0.342904000000000
+ H    0.861986000000000   0.720006000000000   0.573341000000000
+ H    0.138014000000000   0.279994000000000   0.426659000000000
+ H    0.096079000000000   0.639282000000000   0.522091000000000
+ H    0.903921000000000   0.360718000000000   0.477909000000000
+ H    0.097914000000000   0.729251000000000   0.488835000000000
+ H    0.902086000000000   0.270749000000000   0.511165000000000
+ H    0.220203000000000   0.740524000000000   0.566477000000000
+ H    0.779797000000000   0.259476000000000   0.433523000000000
+ $end
+ 
+ $rem
+ jobtype = sp
+ method = hsehjs_xc               ! HSE06: 25% short-range HF exchange, omega 0.11
+ 
+ scf_algorithm = diis
+ max_scf_cycles = 200
+ scf_convergence = 7
+ thresh = 9
+ scf_guess = autosad
+ 
+ basis = def2-TZVP
+ ecp = def2-ecp                   ! Pb 60-e and Te 28-e cores; Cl, N, C, H all-electron
+ aux_basis = rijk-def2-TZVP             ! same 7620-function universal JK fit as rijk-def2-SVP
+ do_rij_bigmem = true
+ do_k_df = true
+ do_trs_df = true
+ k_alg = thc_aok
+ thc_basis = rijk-def2-TZVP
+ isdf_c = 15
+ isdf_cd_mode = 2
+ save_isdf_points = true          ! keep isdf_pts.txt in scratch; later runs on this cell can load_isdf_points
+ grid_type_xc 1
+ kecut 1200
+ lin_dep_thresh = 8
+ 
+ input_bohr = false
+ mp_mesh [1,1,1]                  ! Gamma only
+ symmetry = false
+ mem_total = 450000                ! job asks for 500G
+ $end
+ 
+ -------------------------------------------------------------
+ Running PBC job
+
+ Requested Exchange Correlation Functionals: 
+  DFT Exchange: -0.25000 wpbe_x, omega: 0.11000
+  DFT Exchange:  1.00000 pbe_x
+  DFT Correlation:  1.00000 pbe_c
+  Range-Separated HF Exchange:
+   Short-Range omega:  0.11000, weight:  0.25000
+   Long-Range omega:  0.11000, weight:  0.00000
+   Use THC-ao-K algorithm for HF exchange in kpoints calculation
+       Products of atomic orbitals will be fit using ISDF.
+       THC sn-potential omega (thc_omega): 0.50000
+   Madelung correction is applied to the G=0 component of HF exchange.
+ using 32 threads for computing.
+ ---------------------------------------------------------------
+      Coordinates of Atoms in Central Unit Cell (Angstroms)
+    I     Atom         X            Y            Z
+ ---------------------------------------------------------------
+    1      Pb      2.822719     6.711767     0.000000
+    2      Pb      6.353783     2.342232    10.949400
+    3      Pb     -0.915029     5.505778     3.732410
+    4      Pb      2.719377     3.924005     7.340905
+    5      Te      4.561088    -4.110728    13.701211
+    6      Te      0.877666    11.958738     0.980598
+    7      Te      4.298049     7.404966    13.227429
+    8      Te      1.140705     0.443044     1.454380
+    9      Te      1.294066     9.845771     9.155723
+   10      Te      4.144688    -1.997761     5.526086
+   11      Te     -0.543700     8.779298    10.809923
+   12      Te      5.982453    -0.931288     3.871887
+   13      Cl      3.168000     9.480501     0.574059
+   14      Cl      2.270753    -1.632491    14.107751
+   15      Cl     -1.227557     4.820977    12.235820
+   16      Cl      6.666311     3.027033     2.445989
+   17      Cl      6.558875    -0.302014     9.522622
+   18      Cl     -1.120121     8.150025     5.159188
+   19      Cl      0.206487     3.388670     8.679886
+   20      Cl      5.232266     4.459340     6.001924
+   21      Cl      0.940577     1.685472    12.429620
+   22      Cl      4.498176     6.162538     2.252190
+   23      Cl      3.831580     3.224586     9.907285
+   24      Cl      1.607174     4.623424     4.774524
+   25      Cl      5.020554     1.174653    13.131410
+   26      Cl      0.418199     6.673357     1.550399
+   27      Cl      2.995208     1.155496     6.674351
+   28      Cl      2.443545     6.692514     8.007459
+   29       N      6.841629    -1.364432    14.137114
+   30       N     -1.402875     9.212442     0.544695
+   31       N      2.092681     4.725712    12.271056
+   32       N      3.346072     3.122298     2.410753
+   33       N      1.952475     0.481862     9.660631
+   34       N      3.486279     7.366148     5.021179
+   35       N     -0.763921     6.545637     7.913495
+   36       N      6.202675     1.302373     6.768314
+   37       C      5.427876    -2.556220    12.457515
+   38       C      0.010878    10.404230     2.224294
+   39       C      6.826577    -2.111084    12.858329
+   40       C     -1.387823     9.959095     1.823481
+   41       C      3.382425     6.660350    11.407766
+   42       C      2.056329     1.187660     3.274043
+   43       C      2.018513     6.031019    11.601566
+   44       C      3.420240     1.816991     3.080244
+   45       C      2.712302    -0.723458    10.035017
+   46       C      2.726452     8.571468     4.646793
+   47       C      2.453759    -1.681291     8.863408
+   48       C      2.984995     9.529301     5.818401
+   49       C     -1.966290     8.190987     9.278904
+   50       C      7.405044    -0.342977     5.402906
+   51       C      5.900733     6.737041     8.851663
+   52       C     -0.461979     1.110969     5.830147
+   53       H      6.339299    -0.610262    14.053633
+   54       H     -0.900545     8.458272     0.628176
+   55       H     -0.077589    -1.136948    14.344759
+   56       H      5.516343     8.984958     0.337050
+   57       H      6.704343     3.688458     0.115428
+   58       H     -1.265589     4.159552    14.566381
+   59       H      5.458126    -2.881671    11.523870
+   60       H     -0.019372    10.729681     3.157940
+   61       H      4.829741    -1.767411    12.479391
+   62       H      0.609012     9.615421     2.202418
+   63       H     -0.367506    -2.907294    12.942118
+   64       H      5.806260    10.755304     1.739692
+   65       H     -0.575650    -1.536149    12.144044
+   66       H      6.014404     9.384159     2.537765
+   67       H      3.296755     7.410498    10.767477
+   68       H      2.141999     0.437512     3.914332
+   69       H      3.985848     5.988516    11.002504
+   70       H      1.452905     1.859494     3.679305
+   71       H      1.453785     6.640648    12.139772
+   72       H      3.984969     1.207362     2.542038
+   73       H      1.585665     5.918161    10.717926
+   74       H      3.853088     1.929849     3.963883
+   75       H      2.628692     4.168833    11.791504
+   76       H      2.810062     3.679177     2.890305
+   77       H      1.258257     4.367670    12.330606
+   78       H      4.180497     3.480340     2.351204
+   79       H      2.436827     4.833207    13.106818
+   80       H      3.001927     3.014803     1.574991
+   81       H      2.048267     1.113973    10.308598
+   82       H      3.390487     6.734037     4.373212
+   83       H      2.267187     0.806605     8.871278
+   84       H      3.171567     7.041405     5.810532
+   85       H      1.071721     0.270016     9.572143
+   86       H      4.367033     7.577994     5.109666
+   87       H      2.380204    -1.104577    10.885725
+   88       H      3.058550     8.952588     3.796085
+   89       H      3.677424    -0.522327    10.125207
+   90       H      1.761329     8.370337     4.556602
+   91       H      2.788511    -1.270249     8.026413
+   92       H      2.650243     9.118259     6.655396
+   93       H      1.480763    -1.823991     8.765906
+   94       H      3.957991     9.672001     5.915903
+   95       H      4.897720     8.366990     9.613840
+   96       H      0.541033    -0.518980     5.067970
+   97       H     -1.821927     8.762429     8.482797
+   98       H      7.260681    -0.914419     6.199012
+   99       H      6.032747     6.164614     9.647358
+  100       H     -0.593993     1.683396     5.034451
+  101       H      5.050228     6.468349     8.417683
+  102       H      0.388525     1.379661     6.264126
+  103       H     -0.722610     5.670493     7.665241
+  104       H      6.161364     2.177517     7.016569
+  105       H     -0.893117     7.063615     7.176982
+  106       H      6.331871     0.784396     7.504827
+  107       H      0.017693     6.782043     8.316907
+  108       H      5.421061     1.065967     6.364902
+ ---------------------------------------------------------------
+ --------------------------------------------------
+              Lattice Vectors (Angstroms)
+              X            Y            Z
+ --------------------------------------------------
+   a1       7.775600     0.000000     0.000000
+   a2      -2.130162    13.423535     0.000000
+   a3      -0.206684    -5.575525    14.681809
+ --------------------------------------------------
+ --------------------------------------------------
+       Reciprocal Lattice Vectors (Angstroms^-1)
+              X            Y            Z
+ --------------------------------------------------
+   b1       0.808064     0.128231     0.060072
+   b2      -0.000000     0.468072     0.177754
+   b3      -0.000000    -0.000000     0.427957
+ --------------------------------------------------
+
+ Single point calculation requested
+
+
+ K-Points calculation started.
+
+ There are 2272 basis functions in the central unit cell.
+ There are 343 image cells after screening.
+ There are 113 image cells for CGTO evaluation after screening.
+ Real-Space grid for FFT: (1,1,1)
+ There are 27 real-space grid points.
+
+ There are 337376 atom-centered grid points.
+
+ Monkhorst-Pack mesh is [1,1,1]
+ There are 1 k points.
+
+Initialize compute kernels for all-electron RI-J FTC
+ ========================================================== 
+ Range separation parameter (omega)     = 0.500000000000000000
+ Threshold for shellpair screening      = 0.000000000000010000
+ Threshold for 2e2c SR integral         = 0.000000000000000001
+ Threshold for 2e3c SR integral         = 0.000000000100000000
+ Threshold for AFT G-space screening    = 0.000000000001000000
+ The exponent cutoff for C/D classification (omega2 / 2) is  = 0.000010000000000000
+ ========================================================== 
+ Process the basis set (exp_cutoff = 0.000010000000000000 ) 
+
+ ns_b1 before uncontraction = 888
+ ns_b1 after uncontraction = 888
+ ns_baux before uncontraction = 2124
+ ns_baux after uncontraction = 2124
+
+ nbsf total   = 2272
+ nbsf compact = 2272
+ nbsf diffuse = 0
+ naux total   = 7620
+ naux compact = 7620
+ naux diffuse = 0
+ ========================================================== 
+ Update reciprocal space grid for AFT 
+ PWs along each axis = (15, 24, 28)
+ Total number of PWs = 86583
+ No pseudopotential is requested, update FFT grid to AFT grid
+ ========================================================== 
+
+ Start initializing all-electron THC-K kernels 
+Number of basis function for THC auxiliary basis: 7620
+Number of basis function for auxiliary basis: 7620
+ Update reciprocal space grid for the THC sn potential
+   LR sphere Gcut = 5.5484 bohr^-1 (tau 1.00e-12, omega 0.5), |q|max = 0.0000, box ng = (13, 23, 27), inscribed radius = 5.5589 bohr^-1
+ PW for AFT (THC sn potential): (13,23,27)
+ Update reciprocal space grid for the THC DF driver
+   2e2c Gcut = 1.3305 bohr^-1 (tau 1.00e-14, omega 0.11), |q|max = 0.0000, box ng = (4, 6, 7), inscribed radius = 1.4678 bohr^-1
+ THC omega: RSH -- sn potential at the functional's omega_sr = 0.11000000000000, omega_lr = 0.11000000000000 on the dedicated sn box (sized at omega = 0.50000000000000 on the THC aux basis); metric (P|Q) and k-space 2e3c on the THC DF driver box at omega = 0.11000000000000
+ Initialize DF integral for THC-K
+ TRS is applied for q and -q calculations. There are 1 irreducible q-points out of 1 total q-points.
+ Static memory requirement for 2e2c integral (P-q|Qq):        1.14300000000000 GB
+ Static memory requirement for 2e3c integral (Pq|mu0 nu n):   167.16682848000002 GB (max over ranks)
+ Static memory requirement for 2e3c integral can be reduced by changing thresh_sp!
+ Initialize atom-centered grid for THC-K
+
+ There are 1821664 atom-centered grid points for THC-K.
+
+ Power of the THC grid weight is 0.50000000000000
+ Ratio of ISDF points is 15
+ ISDF Cholesky point selection is atomic (per-atom) + global refinement
+ ISDF candidate pool factor is 3
+ THC-metric pseudo-inverse SVD cutoff (rcond) is 1.00000000000000e-10
+ THC-AO-K M-kernel is semi-numerical (sn)
+ sn SR screening threshold = 1.00000000000000e-12
+ sn LR screening threshold = 1.00000000000000e-12
+ ISDF interpolation points will be saved to /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/isdf_pts.txt
+ Aufbau occupation scheme, occupation determined by eigenvalue
+ k-points (Bohr^-1):
+ == 0-th k-point nmo = 2272, nocc = (380, 380), (0.00000,0.00000,0.00000) ==
+
+ There are 380.000000 alpha and 380.000000 beta electrons per k-point
+ Generate autoSAD guess
+Atom # 0: pb, charge: 0, multiplicity: 3.000000
+Atom # 1: te, charge: 0, multiplicity: 3.000000
+Atom # 2: cl, charge: 0, multiplicity: 2.000000
+Atom # 3: n, charge: 0, multiplicity: 4.000000
+Atom # 4: c, charge: 0, multiplicity: 3.000000
+Atom # 5: h, charge: 0, multiplicity: 2.000000
+    Running SCF for isolated atom #0
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_0/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_0/frgmt_job.out
+    Fragment job begins at Wed Oct 28 09:50:07 2026
+
+ Integrated density by DFT XC:
+   Numerical integral  =    21.999999999845
+   Relative error      =     0.0000000007 %
+   Total fragment job time:  1.09 s.
+    Running SCF for isolated atom #1
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_1/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_1/frgmt_job.out
+    Fragment job begins at Wed Oct 28 09:50:08 2026
+
+ Integrated density by DFT XC:
+   Numerical integral  =    23.999999999503
+   Relative error      =     0.0000000021 %
+   Total fragment job time:  4.71 s.
+    Running SCF for isolated atom #2
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_2/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_2/frgmt_job.out
+    Fragment job begins at Wed Oct 28 09:50:13 2026
+
+ Integrated density by DFT XC:
+   Numerical integral  =    17.000000159245
+   Relative error      =     0.0000009367 %
+   Total fragment job time:  1.54 s.
+    Running SCF for isolated atom #3
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_3/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_3/frgmt_job.out
+    Fragment job begins at Wed Oct 28 09:50:14 2026
+
+ Integrated density by DFT XC:
+   Numerical integral  =     6.999999995973
+   Relative error      =     0.0000000575 %
+   Total fragment job time:  0.96 s.
+    Running SCF for isolated atom #4
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_4/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_4/frgmt_job.out
+    Fragment job begins at Wed Oct 28 09:50:15 2026
+
+ Integrated density by DFT XC:
+   Numerical integral  =     6.000000025353
+   Relative error      =     0.0000004226 %
+   Total fragment job time:  1.01 s.
+    Running SCF for isolated atom #5
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_5/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh/perovskite/scr/P-1_100K_hse06_thcaok_tzvp_k111.55873288/autosad_frgmt_5/frgmt_job.out
+    Fragment job begins at Wed Oct 28 09:50:16 2026
+
+ Integrated density by DFT XC:
+   Numerical integral  =     1.000000000351
+   Relative error      =     0.0000000351 %
+
+ QCPBC ERROR: terminated with an exception:
+   [libctx::root_storage::get(const std::string&)] Data key "/sp/autosad/frgmt_5/sp/scftyp" doesn't exist.

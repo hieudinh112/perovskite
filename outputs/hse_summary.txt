@@ -1,0 +1,48 @@
+# HSE06 (hsehjs_xc, THC-DF-AO-K, def2-SVP + def2-ECP, isdf_c 15) for P-1 100 K, 108 atoms/cell, 32 threads
+# mesh   job       E (Ha/cell)         E (Ha/atom)    gap (eV)  VBM / CBM  cycles  wall (h)  peak RSS (GiB)
+  1x1x1  55711164  -11354.4926633178  -105.1341913   3.2733    G / G      11      3.43       83.4
+  3x1x2  55814339  -11354.1876129820  -105.1313668   3.2278    G / G      11      4.00      461.3
+  5x1x4  55906935  -11354.1876235284  -105.1313669   3.2278    G / G      11     11.08     1537.7
+#
+# 3x1x2 - Gamma: +76.86 meV/atom. The SR exact-exchange term accounts for +78.24 meV/atom of it; everything else
+#   gives -1.38 meV/atom (PBE scan: -1.45). At Gamma only, each occupied orbital exchanges with its own periodic
+#   image 7.78 A away along a; the erfc range is 1/omega = 4.8 A. A point-charge estimate gives -0.29 Ha/cell
+#   (observed -0.31). On 3x1x2 the nearest image is along b at 13.6 A: <= 0.5 meV/atom and ~0.1 meV in levels.
+# Gap: Gamma-only is 45.5 meV too large (VBM at Gamma +32.6 meV, CBM at Gamma -12.8 meV on 3x1x2).
+# Band edges on 3x1x2 relative to Gamma (meV): VB k(0,0,1/2) -35.9, k(1/3,0,0) -81.4, k(1/3,0,1/2) -89.3;
+#   CB +32.4, +63.9, +50.1. (PBE 3x1x2: VB -4.6, -40.0, -41.1; CB +26.7, +57.7, +46.8.)
+# 3x1x2 timing: ISDF points reread from the Gamma run (selection 0 s vs 2.05 h); M build 3.72 h (metric pinv
+#   1.07 h, block loop 2.52 h, of which E5 contraction 1.52 h for 4 q-points); SCF 16 min (87 s/cycle vs 42 s).
+#
+# 5x1x4 - 3x1x2 (10-28 23:55): -0.0027 meV/atom, gap -0.02 meV (3.22785 vs 3.22787 eV; VBM 2.79844 vs 2.79843, CBM
+#   6.02630 both). So 3x1x2 is converged along a and c. b stays 1 on both, so that axis is not tested (PBE 3x2x2 vs
+#   3x1x2: 0.009 meV/atom, 1.9 meV in the gap).
+# 5x1x4 band edges relative to Gamma (meV), VB / CB: a (1/5,0,0) -62.6 / +12.0, (2/5,0,0) -100.7 / +98.8;
+#   c (0,0,1/4) -32.4 / +15.8, (0,0,1/2) -35.9 / +32.4 (same as 3x1x2). VBM and CBM both at Gamma, gap direct.
+# 5x1x4 timing: points reread from Gamma; M build 10.03 h (metric pinv 3.86 h for 20 SVDs on 1 thread each, block
+#   loop 5.82 h at 49.4 s per block, E5 3.1 h for 11 q-points); SCF 11 cycles in ~1 h. Peak RSS 1537.7 GiB in
+#   the pinv, SCF peak 1083.8 GiB. bigmem 1900G, holy8a24104.
+#
+# def2-TZVP + def2-ECP (aux/thc rijk-def2-TZVP; nbsf 2272 vs 1216, nisdf 34083 vs 18243), otherwise the same deck;
+# $rem_autosad scf_algorithm diis (label fragdiis, because the atomic GDM stalls on H with TZVP).
+# mesh   job       E (Ha/cell)         E (Ha/atom)    gap (eV)  VBM / CBM  cycles  wall (h)  peak RSS (GiB)
+  1x1x1  55875079  -11358.2717031453  -105.1691824   3.3190    G / G      11     16.44      289.0
+#
+# TZVP - SVP at Gamma (10-29 02:23): -3.7790 Ha/cell = -952.2 meV/atom; gap +45.7 meV (3.31897 vs 3.27326 eV;
+#   HOMO 2.70889 vs 2.76577 eV, LUMO 6.02787 vs 6.03902 eV).
+# TZVP Gamma timing: ISDF point selection 13.04 h (SVP 2.05 h); M build 2.75 h (metric pinv 1.02 h, block loop
+#   1.67 h for 431 blocks, of which E5 contraction 0.78 h); guess + 11 SCF cycles ~27 min after the M build (SVP ~6 min).
+#   Peak RSS 289.0 GiB in the pinv; SCF peak 260 GiB (floor 140 GiB). joonholee holy8a24305.
+# TZVP 3x1x2 is 55875081 (bigmem 1900G, holy8a24104), reading these 34083 points.
+  3x1x2  55875081  -11357.9687166728  -105.1663770   3.2757    G / G      11     10.48     1605.5
+#
+# TZVP 3x1x2 - Gamma (10-29 10:24): +76.34 meV/atom (SVP +76.86); gap -43.3 meV (SVP -45.5).
+# TZVP - SVP at 3x1x2: -952.7 meV/atom; gap +47.8 meV (3.27571 vs 3.22787 eV; VBM 2.73910 vs 2.79843 eV, CBM
+#   6.01480 vs 6.02630 eV). At Gamma the basis shift was +45.7 meV.
+# TZVP 3x1x2 band edges relative to Gamma (meV), VB / CB: (0,0,1/2) -15.2 / +32.7, (1/3,0,0) -61.5 / +66.1,
+#   (1/3,0,1/2) -72.4 / +50.1 (SVP 3x1x2: -35.9 / +32.4, -81.4 / +63.9, -89.3 / +50.1). VBM and CBM at Gamma,
+#   gap direct. The TZVP valence band is ~20 meV flatter along c.
+# TZVP 3x1x2 timing: points reread from the TZVP Gamma run; M build 8.86 h (metric pinv 4.74 h for 6 SVDs on 5
+#   threads each, block loop 3.90 h for 431 blocks, of which E5 contraction 2.05 h for 4 q-points); guess + 11 SCF
+#   cycles ~83 min. Peak RSS 1605.5 GiB in the pinv (model 1627); SCF peak 1127.8 GiB. bigmem 1900G, holy8a24104.
+#   Memory chart: outputs/mem_tzvp_k312_55875081.png (plot_mem_profile.py).
